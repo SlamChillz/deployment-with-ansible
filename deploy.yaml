@@ -1,0 +1,18 @@
+---
+
+- hosts: all
+  remote_user: "{{ user }}"
+
+  vars_files:
+    - vars/main.yaml
+
+  tasks:
+    - block:
+      - include_tasks: tasks/clone_repo.yaml
+      - include_tasks: tasks/set_owner_group_and_permissions.yaml
+      - include_tasks: tasks/check_that_cache_folder_is_writable.yaml
+      - include_tasks: tasks/install_and_run_composer.yaml
+      - include_tasks: tasks/setup_env.yaml
+      - include_tasks: tasks/optimize_app.yaml
+      - include_tasks: tasks/migrate_and_seed_db.yaml
+      - include_tasks: tasks/restart_apache.yaml

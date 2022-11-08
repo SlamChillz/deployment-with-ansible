@@ -1,0 +1,3 @@
+*.log
+vars/main.yaml
+roles/psql/files/postgres.sh

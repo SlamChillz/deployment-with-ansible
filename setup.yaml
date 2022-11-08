@@ -1,0 +1,30 @@
+---
+
+- hosts: all
+  gather_facts: False
+  remote_user: "{{ user }}"
+
+  vars_files:
+    - vars/main.yaml
+
+  roles:
+    - name: git
+      tags: git
+
+    - name: ufw
+      tags: ufw
+
+    - name: php
+      tags: php
+
+    - name: apache
+      tags: apache
+
+    - name: ssl
+      tags: ssl
+
+    - name: mysql
+      tags: mysql
+
+    - name: psql
+      tags: psql

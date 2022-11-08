@@ -19,7 +19,7 @@ configuring your apache webserver etc, will be defined in an ansible playbook an
 
 - An ansible control node, where ansible is install
 - At least one remote server with `Debian 11` linux operating system
-- Clone this repository `git clone https://github.com/Mendyslam/altschool-second-semester-project-cloud-engineering.git`
+- Clone this repository `git clone https://github.com/SlamChillz/deployment-with-ansible.git`
 
 ## Make these modifications
 
@@ -27,7 +27,7 @@ configuring your apache webserver etc, will be defined in an ansible playbook an
     - using the `mv` command do: `mv main.yaml.sample main.yaml`
     - Replace the `{ ... }` with the actual values. If your remote server user is `altschool`, then line:
       `user: { your host username }` will be `user: altschool`
-- postgresql script: rename [postgres.sh.sample] to `postgres.sh` and provide the appropriate values as outlined above.
+- postgresql script: rename [postgres.sh.sample](roles/psql/files/postgres.sh.sample) to `postgres.sh` and provide the appropriate values as outlined above.
 
 ## 1. The Server Initial Setup
 
@@ -65,7 +65,7 @@ configuring your apache webserver etc, will be defined in an ansible playbook an
 - Clones the application repository
 - Sets appropriate ownership and permissions to the project directory
 - Ensures the application storage cache is writable
-- Installs composer and runs `cmposer install` to install the application dependencies
+- Installs composer and runs `composer install` to install the application dependencies
 - Sets up environmental variables and generates application key
 - Optimizes the application build
 - Runs migrations and seeds the database
@@ -75,7 +75,7 @@ configuring your apache webserver etc, will be defined in an ansible playbook an
 - `ansible-playbook deploy.yaml`
 
 ## Application URL
-- domain: [https://altcloud.me](https://altcloud.me)
+- domain: [altcloud.me](altcloud.me) `no longer available`
 - To view the `tags` and `articles`
-    - [https://altcloud.me/api/tags](https://altcloud.me/api/tags)
-    - [https://altcloud.me/api/articles](https://altcloud.me/api/articles)
+    - [https://altcloud.me/api/tags](https://altcloud.me/api/tags) `no longer available`
+    - [https://altcloud.me/api/articles](https://altcloud.me/api/articles) `no longer available`

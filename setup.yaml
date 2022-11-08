@@ -23,8 +23,5 @@
     - name: ssl
       tags: ssl
 
-    - name: mysql
-      tags: mysql
-
     - name: psql
       tags: psql
